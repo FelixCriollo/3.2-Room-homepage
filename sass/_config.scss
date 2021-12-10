@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+/* variables */
+$dark-gray: hsl(0, 0%, 63%);
+$black: #000;
+$white: #fff;
+$very-dark-gray: hsl(0, 0%, 27%);
+
+/* mixin */ 
+@mixin tablet {
+  @media (min-width: 768px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+
+/* css */ 
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Spartan', sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  z-index: -3;
+  object-fit: fill;
+
+  @include desktop {
+    height: 100%;
+  }
+}
+
+.display-none {
+  display: none !important;
+  @include tablet {
+    display: block !important;
+  }
+}
+
+.container {
+  @include desktop {
+    width: 100%;
+    max-width: 1440px;
+    height: 800px;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.container-top {
+  @include desktop {
+    height: 66.6%;
+    display: flex;
+  }
+}
+
+.container-bottom {
+  @include desktop {
+    height: 33.4%;
+    display: flex;
+  }
+}

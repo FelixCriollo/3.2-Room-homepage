@@ -1,0 +1,97 @@
+@use '_config.scss' as *;
+
+.content {
+  height: 410px;
+  padding: 6em 2.7em;
+  @include desktop {
+    padding: 8.3% 7.2%;
+    height: 100%;
+    width: 41.7%;
+    max-width: 600px;
+  }
+
+  &__title {
+    font-size: 1.60rem;
+    margin-bottom: .8em;
+    @include desktop {
+      font-size: 2.28rem;
+    }
+  }
+  
+  &__body {
+    font-size: .72rem;
+    line-height: 1.2rem;
+    color: $very-dark-gray;
+    @include desktop {
+      font-size: .73rem;
+    }
+  }
+
+  .shop-now {
+    background: transparent;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .825em;
+    margin-top: 3.25rem;
+    @include desktop {
+      margin-top: 2rem;
+      &:hover,
+      &:focus {
+        color: $dark-gray;
+      }
+    }
+    
+    svg {
+      margin-left: 2.1em;
+
+      svg path {
+        &:hover,
+        &:focus {
+          fill: $dark-gray;
+        }
+      }
+    }
+  }
+}
+
+
+.about {
+  padding: 5em 2.7em 4.2em 2.7em;
+  @include desktop {
+    padding: 4.95% 3.35% 0 3.35%;
+    width: 40.29%;
+  }
+
+  &__title {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .42em;
+    margin-bottom: .8em;
+    @include desktop {
+      margin-bottom: .9em;
+    }
+  }
+  
+  &__body {
+    font-size: .725rem;
+    line-height: 1.3rem;
+    color: $very-dark-gray;
+    @include desktop {
+      font-size: .72rem;
+      line-height: 1.3rem;
+    }
+  }
+}
+
+.about-light {
+  @include desktop {
+    width: 30.6%;
+  }
+}
+
+.about-dark {
+  @include desktop {
+    width: calc(100% - 30.6% - 40.29%);
+  }
+}
